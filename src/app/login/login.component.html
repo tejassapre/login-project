@@ -3,7 +3,7 @@
   <form (ngSubmit)="onLogin()">
     <input type="text" [(ngModel)]="username" name="username" placeholder="Username" required />
     <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
-    <h1>BAJAJ</h1>
+    <h5>BAJAJ</h5>
     <button type="submit">Login</button>
   </form>
   <p *ngIf="errorMessage" style="color:red">{{ errorMessage }}</p>
