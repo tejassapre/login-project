@@ -1,46 +1,68 @@
 
-body, .dashboard-container {
-	background: #18122B;
+/* Dashboard - formal & stylish to match login */
+.dashboard-page {
 	min-height: 100vh;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	padding-top: 6vh;
+	background: #f5f7fa; /* match app's light background */
 }
 
 .dashboard-container {
-	background: rgba(24, 18, 43, 0.95);
-	border: 2px solid #ff00ea;
-	box-shadow: 0 0 32px #ff00ea, 0 0 8px #00fff7;
-	border-radius: 16px;
-	padding: 40px 32px;
-	max-width: 400px;
-	margin-top: 60px;
+	background: #fff;
+	border: 1px solid #e6eaef;
+	box-shadow: 0 10px 30px rgba(60,60,90,0.08), 0 2px 6px rgba(0,0,0,0.03);
+	border-radius: 14px;
+	padding: 40px 36px;
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
-h2 {
-	color: #00fff7;
-	text-shadow: 0 0 8px #00fff7, 0 0 2px #ff00ea;
-	font-family: 'Orbitron', 'Montserrat', sans-serif;
-	letter-spacing: 2px;
-	margin-bottom: 24px;
+.dashboard-container h2 {
+	color: #2d2d39;
+	font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+	font-weight: 700;
+	margin: 0 0 18px 0;
+	font-size: 1.6rem;
 }
 
-button {
-	padding: 12px 32px;
-	background: linear-gradient(90deg, #ff00ea 0%, #00fff7 100%);
-	color: #18122B;
-	font-weight: bold;
-	font-size: 1.1rem;
-	border: none;
+.dashboard-actions {
+	margin-top: 18px;
+	display: flex;
+	gap: 12px;
+}
+
+.btn {
+	padding: 10px 22px;
 	border-radius: 8px;
-	box-shadow: 0 0 16px #ff00ea, 0 0 8px #00fff7;
+	border: none;
 	cursor: pointer;
-	margin-top: 16px;
-	transition: background 0.2s, color 0.2s;
+	font-weight: 600;
+	font-size: 1rem;
 }
 
-button:hover {
-	background: linear-gradient(90deg, #00fff7 0%, #ff00ea 100%);
+.btn-logout {
+	background: linear-gradient(90deg, #f0616f 0%, #ff9a8b 100%);
 	color: #fff;
+	box-shadow: 0 6px 18px rgba(240,97,111,0.12);
+}
+
+.btn-logout:hover {
+	transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+	.dashboard-container {
+		padding: 28px 20px;
+		max-width: 94vw;
+	}
+	.dashboard-container h2 {
+		font-size: 1.3rem;
+	}
 }
