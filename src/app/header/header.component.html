@@ -1,0 +1,7 @@
+<nav>
+  <a routerLink="/dashboard" *ngIf="isLoggedIn()">Dashboard</a>
+  <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+    <a routerLink="/profile" *ngIf="isLoggedIn()">Profile</a>
+
+  <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+</nav>
